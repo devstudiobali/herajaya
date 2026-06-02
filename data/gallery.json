@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Instalasi Unit Kantor",
+    "category": "Mesin Fotocopy",
+    "image": "https://images.pexels.com/photos/4792285/pexels-photo-4792285.jpeg?auto=compress&cs=tinysrgb&w=900"
+  },
+  {
+    "title": "Pemeriksaan Service",
+    "category": "Service Center",
+    "image": "https://images.pexels.com/photos/4792491/pexels-photo-4792491.jpeg?auto=compress&cs=tinysrgb&w=900"
+  },
+  {
+    "title": "Setup Area Usaha",
+    "category": "Fotocopy Center",
+    "image": "https://images.pexels.com/photos/4483608/pexels-photo-4483608.jpeg?auto=compress&cs=tinysrgb&w=900"
+  },
+  {
+    "title": "Perlengkapan Operasional",
+    "category": "Supplies",
+    "image": "https://images.pexels.com/photos/4792728/pexels-photo-4792728.jpeg?auto=compress&cs=tinysrgb&w=900"
+  }
+]

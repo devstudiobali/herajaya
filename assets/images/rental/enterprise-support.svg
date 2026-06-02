@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise Support rental package illustration</title>
+  <desc id="desc">Enterprise office support with campus building, copier unit, and service controls.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#312e81"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="machine" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ede9fe"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="560" fill="url(#bg)"/>
+  <path d="M0 394c98-42 196-36 296-10 170 46 300 12 458-78 72-40 144-64 206-70v324H0z" fill="#2563eb" opacity=".25"/>
+  <g opacity=".14" stroke="#ddd6fe" stroke-width="2">
+    <path d="M80 96h800M80 176h800M80 256h800M80 336h800M80 416h800"/>
+    <path d="M160 52v468M320 52v468M480 52v468M640 52v468M800 52v468"/>
+  </g>
+  <circle cx="750" cy="152" r="112" fill="#8b5cf6" opacity=".24"/>
+  <g>
+    <rect x="116" y="168" width="214" height="248" rx="16" fill="#172554" stroke="#93c5fd" stroke-width="4"/>
+    <rect x="150" y="206" width="42" height="42" rx="8" fill="#bfdbfe"/>
+    <rect x="216" y="206" width="42" height="42" rx="8" fill="#60a5fa"/>
+    <rect x="150" y="274" width="42" height="42" rx="8" fill="#60a5fa"/>
+    <rect x="216" y="274" width="42" height="42" rx="8" fill="#bfdbfe"/>
+    <rect x="174" y="346" width="74" height="70" rx="8" fill="#0f172a"/>
+  </g>
+  <g>
+    <rect x="420" y="190" width="280" height="86" rx="18" fill="#172554" stroke="#c4b5fd" stroke-width="4"/>
+    <rect x="458" y="214" width="204" height="36" rx="9" fill="#2563eb"/>
+    <rect x="370" y="264" width="360" height="182" rx="28" fill="url(#machine)" stroke="#eff6ff" stroke-width="4"/>
+    <rect x="426" y="312" width="286" height="54" rx="10" fill="#1e293b"/>
+    <rect x="478" y="388" width="214" height="22" rx="6" fill="#2563eb"/>
+    <rect x="478" y="424" width="144" height="16" rx="5" fill="#475569"/>
+    <rect x="468" y="250" width="164" height="88" rx="10" fill="#f8fafc"/>
+  </g>
+  <g>
+    <rect x="730" y="268" width="120" height="150" rx="16" fill="#0f172a" stroke="#93c5fd" stroke-width="4"/>
+    <circle cx="790" cy="322" r="26" fill="#22c55e"/>
+    <path d="M780 322l12 12 24-30" fill="none" stroke="#ecfdf5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="758" y="370" width="72" height="12" rx="4" fill="#bfdbfe"/>
+    <rect x="758" y="394" width="54" height="12" rx="4" fill="#60a5fa"/>
+  </g>
+  <text x="480" y="506" text-anchor="middle" fill="#dbeafe" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="8">ENTERPRISE SUPPORT</text>
+</svg>

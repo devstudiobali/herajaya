@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Staf tata usaha sekolah</title>
+  <desc id="desc">Portrait illustration of school administration staff.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fef3c7"/>
+      <stop offset="1" stop-color="#bfdbfe"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="320" fill="url(#bg)"/>
+  <path d="M56 92h208v126H56z" fill="#1e3a8a" opacity=".2"/>
+  <path d="M82 116h156M82 150h118M82 184h146" stroke="#2563eb" stroke-width="12" stroke-linecap="round" opacity=".45"/>
+  <path d="M72 294c12-72 58-108 91-108 35 0 82 36 94 108z" fill="url(#shirt)"/>
+  <circle cx="164" cy="136" r="56" fill="#e7b78e"/>
+  <path d="M108 136c-6-42 17-80 58-82 43-2 68 38 54 86-23-6-44-20-58-42-13 19-31 32-54 38z" fill="#78350f"/>
+  <circle cx="146" cy="143" r="5" fill="#0f172a"/>
+  <circle cx="183" cy="143" r="5" fill="#0f172a"/>
+  <path d="M150 166c10 8 24 8 34 0" fill="none" stroke="#9f1239" stroke-width="5" stroke-linecap="round"/>
+  <path d="M126 206h76v38h-76z" fill="#eff6ff"/>
+  <path d="M126 206l38 30 38-30" fill="#dbeafe"/>
+</svg>

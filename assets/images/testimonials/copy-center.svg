@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Pengelola fotocopy center</title>
+  <desc id="desc">Portrait illustration of a copy center manager.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ccfbf1"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="320" fill="url(#bg)"/>
+  <rect x="36" y="52" width="248" height="162" rx="28" fill="#0f172a" opacity=".16"/>
+  <rect x="58" y="76" width="94" height="20" rx="6" fill="#0f766e" opacity=".42"/>
+  <rect x="58" y="112" width="158" height="18" rx="6" fill="#0ea5e9" opacity=".5"/>
+  <path d="M70 294c12-70 58-106 92-106 36 0 82 36 94 106z" fill="url(#shirt)"/>
+  <circle cx="162" cy="136" r="56" fill="#d08a5d"/>
+  <path d="M107 126c3-48 27-76 65-76 34 0 56 25 58 70-29-4-70-18-96-36-7 14-15 27-27 42z" fill="#334155"/>
+  <circle cx="143" cy="142" r="5" fill="#0f172a"/>
+  <circle cx="181" cy="142" r="5" fill="#0f172a"/>
+  <path d="M148 164c10 8 24 8 34 0" fill="none" stroke="#7f1d1d" stroke-width="5" stroke-linecap="round"/>
+  <rect x="121" y="206" width="82" height="54" rx="12" fill="#f8fafc"/>
+  <path d="M134 224h56M134 242h40" stroke="#2563eb" stroke-width="8" stroke-linecap="round"/>
+</svg>

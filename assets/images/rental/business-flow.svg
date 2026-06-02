@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">Business Flow rental package illustration</title>
+  <desc id="desc">Active office document workflow with copier, charts, and connected process cards.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="machine" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ccfbf1"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="560" fill="url(#bg)"/>
+  <path d="M0 398c182-94 284-24 444-42 154-18 278-118 516-60v264H0z" fill="#2563eb" opacity=".22"/>
+  <g opacity=".15" stroke="#ccfbf1" stroke-width="2">
+    <path d="M70 100h820M70 190h820M70 280h820M70 370h820"/>
+    <path d="M170 55v430M340 55v430M510 55v430M680 55v430M850 55v430"/>
+  </g>
+  <circle cx="210" cy="150" r="88" fill="#14b8a6" opacity=".34"/>
+  <circle cx="775" cy="135" r="120" fill="#2563eb" opacity=".3"/>
+  <g fill="none" stroke="#93c5fd" stroke-width="8" stroke-linecap="round" opacity=".9">
+    <path d="M206 208h164"/>
+    <path d="M654 208h126"/>
+    <path d="M480 160v-48"/>
+  </g>
+  <g>
+    <rect x="150" y="150" width="160" height="98" rx="18" fill="#0f172a" stroke="#99f6e4" stroke-width="4"/>
+    <rect x="368" y="118" width="224" height="128" rx="22" fill="#172554" stroke="#93c5fd" stroke-width="4"/>
+    <rect x="660" y="150" width="160" height="98" rx="18" fill="#0f172a" stroke="#bfdbfe" stroke-width="4"/>
+    <rect x="176" y="178" width="110" height="14" rx="5" fill="#5eead4"/>
+    <rect x="176" y="208" width="82" height="14" rx="5" fill="#38bdf8"/>
+    <rect x="695" y="178" width="94" height="14" rx="5" fill="#bfdbfe"/>
+    <rect x="695" y="208" width="62" height="14" rx="5" fill="#60a5fa"/>
+  </g>
+  <rect x="310" y="284" width="340" height="164" rx="26" fill="url(#machine)" stroke="#ecfeff" stroke-width="4"/>
+  <rect x="370" y="326" width="264" height="50" rx="10" fill="#1e293b"/>
+  <rect x="414" y="397" width="204" height="22" rx="6" fill="#2563eb"/>
+  <rect x="414" y="430" width="122" height="16" rx="5" fill="#475569"/>
+  <rect x="394" y="226" width="176" height="88" rx="10" fill="#f8fafc"/>
+  <path d="M428 280l34-34 36 24 42-50" fill="none" stroke="#2563eb" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="480" y="506" text-anchor="middle" fill="#dbeafe" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="8">BUSINESS FLOW</text>
+</svg>

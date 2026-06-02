@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">Office Ready rental package illustration</title>
+  <desc id="desc">Small office desk with copier, laptop, and daily documents.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#1e3a8a"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#bfdbfe"/>
+    </linearGradient>
+    <linearGradient id="machine" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="560" fill="url(#bg)"/>
+  <path d="M0 420c120-54 246-58 378-36 172 28 346 10 582-110v286H0z" fill="#2563eb" opacity=".28"/>
+  <g opacity=".16" stroke="#bfdbfe" stroke-width="2">
+    <path d="M80 80h800M80 160h800M80 240h800M80 320h800M80 400h800"/>
+    <path d="M160 40v460M320 40v460M480 40v460M640 40v460M800 40v460"/>
+  </g>
+  <circle cx="760" cy="152" r="92" fill="#2563eb" opacity=".35"/>
+  <rect x="205" y="330" width="550" height="38" rx="19" fill="#0f172a" opacity=".45"/>
+  <rect x="338" y="180" width="286" height="92" rx="18" fill="#172554" stroke="#93c5fd" stroke-width="4"/>
+  <rect x="378" y="202" width="204" height="46" rx="10" fill="#2563eb"/>
+  <rect x="300" y="260" width="360" height="176" rx="26" fill="url(#machine)" stroke="#dbeafe" stroke-width="4"/>
+  <rect x="343" y="305" width="314" height="58" rx="10" fill="#1e293b"/>
+  <rect x="405" y="382" width="210" height="24" rx="6" fill="#2563eb"/>
+  <rect x="405" y="416" width="160" height="18" rx="5" fill="#475569"/>
+  <rect x="420" y="246" width="162" height="86" rx="8" fill="url(#paper)"/>
+  <rect x="120" y="304" width="138" height="96" rx="12" fill="#172554" stroke="#60a5fa" stroke-width="3"/>
+  <rect x="138" y="326" width="102" height="16" rx="4" fill="#93c5fd"/>
+  <rect x="138" y="356" width="74" height="14" rx="4" fill="#38bdf8"/>
+  <rect x="690" y="300" width="104" height="130" rx="10" fill="#eff6ff"/>
+  <path d="M720 300v42h42" fill="#bfdbfe"/>
+  <rect x="712" y="366" width="54" height="12" rx="4" fill="#2563eb"/>
+  <rect x="712" y="392" width="72" height="12" rx="4" fill="#94a3b8"/>
+  <text x="480" y="490" text-anchor="middle" fill="#dbeafe" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="8">OFFICE READY</text>
+</svg>

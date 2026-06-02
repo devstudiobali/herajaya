@@ -1,0 +1,72 @@
+[
+  {
+    "id": "canon-ir-adv-dx-c3720i",
+    "name": "Canon imageRUNNER ADVANCE DX C3720i",
+    "category": "Mesin Baru",
+    "image": "assets/images/products/placeholder-copier.svg",
+    "specs": "A3 Color Multifunction, print scan copy, duplex, network ready, cocok untuk kantor modern."
+  },
+  {
+    "id": "canon-ir-adv-4525i",
+    "name": "Canon imageRUNNER ADVANCE 4525i",
+    "category": "Mesin Baru",
+    "image": "assets/images/products/placeholder-copier.svg",
+    "specs": "A3 Monochrome, kecepatan 25 ppm, duplex, DADF, hemat energi untuk operasional harian."
+  },
+  {
+    "id": "ricoh-mp-3055",
+    "name": "Ricoh MP 3055",
+    "category": "Mesin Rekondisi",
+    "image": "assets/images/products/placeholder-copier.svg",
+    "specs": "A3 Monochrome, 30 ppm, scan warna, copy volume menengah, unit rekondisi siap pakai."
+  },
+  {
+    "id": "xerox-apeosport-v-c3375",
+    "name": "Fuji Xerox ApeosPort-V C3375",
+    "category": "Mesin Rekondisi",
+    "image": "assets/images/products/placeholder-copier.svg",
+    "specs": "A3 Color Multifunction, 35 ppm, network print, scan, cocok untuk percetakan dan bisnis dokumen."
+  },
+  {
+    "id": "konica-minolta-bizhub-287",
+    "name": "Konica Minolta Bizhub 287",
+    "category": "Mesin Rekondisi",
+    "image": "assets/images/products/placeholder-copier.svg",
+    "specs": "A3 Monochrome, 28 ppm, duplex, scan warna, pilihan ekonomis untuk sekolah dan UMKM."
+  },
+  {
+    "id": "sharp-bp-20m31",
+    "name": "Sharp BP-20M31",
+    "category": "Mesin Baru",
+    "image": "assets/images/products/placeholder-copier.svg",
+    "specs": "A3 Monochrome, 31 ppm, print copy scan, desain ringkas untuk kantor dan usaha fotocopy."
+  },
+  {
+    "id": "toner-canon-npg-67",
+    "name": "Toner Canon NPG-67",
+    "category": "Supplies",
+    "image": "assets/images/products/placeholder-copier.svg",
+    "specs": "Toner original/compatible untuk kebutuhan cetak harian dengan hasil tajam dan stabil."
+  },
+  {
+    "id": "drum-unit-ir-advance",
+    "name": "Drum Unit imageRUNNER ADVANCE",
+    "category": "Sparepart",
+    "image": "assets/images/products/placeholder-copier.svg",
+    "specs": "Sparepart drum unit pengganti untuk menjaga kualitas cetak tetap bersih dan konsisten."
+  },
+  {
+    "id": "developer-ricoh-mp-series",
+    "name": "Developer Ricoh MP Series",
+    "category": "Supplies",
+    "image": "assets/images/products/placeholder-copier.svg",
+    "specs": "Developer mesin fotocopy Ricoh MP series untuk perawatan berkala dan hasil cetak merata."
+  },
+  {
+    "id": "pickup-roller-canon",
+    "name": "Pickup Roller Canon",
+    "category": "Sparepart",
+    "image": "assets/images/products/placeholder-copier.svg",
+    "specs": "Roller penarik kertas untuk mengurangi paper jam dan menjaga alur kertas tetap lancar."
+  }
+]

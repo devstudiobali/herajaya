@@ -1,0 +1,261 @@
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes soft-pulse {
+  0%,
+  100% {
+    opacity: 0.72;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes copy-paper-flow {
+  0% {
+    opacity: 0;
+    transform: translateY(-28px);
+  }
+
+  20%,
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(120px);
+  }
+}
+
+@keyframes scan-light {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.35;
+  }
+
+  50% {
+    transform: translateY(72px);
+    opacity: 0.9;
+  }
+}
+
+@keyframes ambient-shift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-1.5%, 1%, 0) scale(1.03);
+  }
+}
+
+@keyframes grid-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(58px, 58px, 0);
+  }
+}
+
+@keyframes scan-move {
+  from {
+    background-position: 0 -260px, 0 0;
+  }
+
+  to {
+    background-position: 0 100vh, 0 0;
+  }
+}
+
+@keyframes float-light {
+  from {
+    opacity: 0.65;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  to {
+    opacity: 0.95;
+    transform: translate3d(24px, -22px, 0) scale(1.12);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 720ms ease both;
+}
+
+.animate-soft-pulse {
+  animation: soft-pulse 2.8s ease-in-out infinite;
+}
+
+.transition-smooth {
+  transition:
+    color 220ms ease,
+    background-color 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    transform 220ms ease,
+    opacity 220ms ease;
+}
+
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.hero-bg {
+  isolation: isolate;
+}
+
+.animated-grid {
+  background-image:
+    linear-gradient(rgba(147, 197, 253, 0.13) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(147, 197, 253, 0.13) 1px, transparent 1px);
+  background-size: 58px 58px;
+  animation: grid-drift 24s linear infinite;
+}
+
+.hero-scanline {
+  background:
+    linear-gradient(180deg, transparent 0%, rgba(96, 165, 250, 0.12) 48%, rgba(37, 99, 235, 0.24) 50%, rgba(96, 165, 250, 0.12) 52%, transparent 100%),
+    repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 7px);
+  background-size: 100% 260px, 100% 8px;
+  animation: scan-move 7s linear infinite;
+  mix-blend-mode: screen;
+  opacity: 0.6;
+}
+
+.floating-light {
+  position: absolute;
+  z-index: -10;
+  width: 280px;
+  height: 280px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.26);
+  filter: blur(70px);
+  animation: float-light 9s ease-in-out infinite alternate;
+}
+
+.floating-light-one {
+  top: 16%;
+  right: 8%;
+}
+
+.floating-light-two {
+  bottom: 10%;
+  left: 5%;
+  width: 220px;
+  height: 220px;
+  animation-delay: -3s;
+}
+
+.hero-video-fallback {
+  background:
+    radial-gradient(circle at 72% 30%, rgba(37, 99, 235, 0.42), transparent 28%),
+    radial-gradient(circle at 30% 68%, rgba(14, 165, 233, 0.18), transparent 30%),
+    linear-gradient(135deg, #020617 0%, #0f172a 42%, #1e293b 100%);
+}
+
+.hero-video-fallback::before {
+  position: absolute;
+  inset: -18%;
+  content: "";
+  background:
+    linear-gradient(115deg, transparent 0 44%, rgba(248, 250, 252, 0.08) 45% 46%, transparent 47% 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: auto, 72px 72px, 72px 72px;
+  animation: ambient-shift 12s ease-in-out infinite;
+}
+
+.hero-copy-machine {
+  position: absolute;
+  right: max(6vw, 2rem);
+  bottom: 12vh;
+  width: min(34rem, 72vw);
+  height: min(26rem, 58vw);
+  opacity: 0.62;
+}
+
+.hero-copy-screen,
+.hero-copy-body,
+.hero-copy-paper,
+.hero-copy-light {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero-copy-screen {
+  top: 10%;
+  width: 48%;
+  height: 28%;
+  border: 1px solid rgba(248, 250, 252, 0.18);
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.18), rgba(37, 99, 235, 0.18));
+  box-shadow: 0 18px 60px rgba(37, 99, 235, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.hero-copy-body {
+  bottom: 10%;
+  width: 76%;
+  height: 46%;
+  border: 1px solid rgba(248, 250, 252, 0.16);
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.2), rgba(15, 23, 42, 0.42));
+  box-shadow: 0 28px 90px rgba(2, 6, 23, 0.52);
+  backdrop-filter: blur(14px);
+}
+
+.hero-copy-paper {
+  top: 34%;
+  width: 34%;
+  height: 24%;
+  background: rgba(248, 250, 252, 0.84);
+  box-shadow: 0 18px 48px rgba(2, 6, 23, 0.32);
+  animation: copy-paper-flow 4.8s ease-in-out infinite;
+}
+
+.hero-copy-paper-two {
+  animation-delay: 2.4s;
+}
+
+.hero-copy-light {
+  top: 38%;
+  width: 56%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.95), transparent);
+  box-shadow: 0 0 30px rgba(96, 165, 250, 0.8);
+  animation: scan-light 3.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}

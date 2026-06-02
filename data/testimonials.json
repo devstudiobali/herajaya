@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Admin Operasional Kantor",
+    "segment": "Kantor",
+    "image": "assets/images/testimonials/admin-office.svg",
+    "quote": "Herajaya membantu kami memilih mesin yang sesuai volume kerja harian. Proses konsultasinya jelas dan mudah dipahami."
+  },
+  {
+    "name": "Pengelola Fotocopy Center",
+    "segment": "Fotocopy Center",
+    "image": "assets/images/testimonials/copy-center.svg",
+    "quote": "Kami terbantu dengan arahan unit, supplies, dan kebutuhan perawatan. Operasional awal jadi lebih terencana."
+  },
+  {
+    "name": "Staf Tata Usaha Sekolah",
+    "segment": "Sekolah",
+    "image": "assets/images/testimonials/school-staff.svg",
+    "quote": "Kebutuhan service dan sparepart lebih mudah dikoordinasikan. Timnya responsif saat mesin perlu pengecekan."
+  }
+]

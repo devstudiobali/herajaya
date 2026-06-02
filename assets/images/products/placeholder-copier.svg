@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 675" role="img" aria-labelledby="title desc">
+  <title id="title">Herajaya copier product placeholder</title>
+  <desc id="desc">Illustration of a modern photocopy machine for Herajaya product catalog.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b0f19"/>
+      <stop offset="0.55" stop-color="#0a1128"/>
+      <stop offset="1" stop-color="#001f54"/>
+    </linearGradient>
+    <linearGradient id="machine" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#93c5fd" stop-opacity=".78"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="900" height="675" fill="url(#bg)"/>
+  <path d="M0 456c118-48 245-61 382-41 158 24 278-15 518-114v374H0z" fill="#2563eb" opacity=".16"/>
+  <g opacity=".22">
+    <path d="M0 108h900M0 184h900M0 260h900M0 336h900M0 412h900M0 488h900" stroke="#93c5fd"/>
+    <path d="M105 0v675M210 0v675M315 0v675M420 0v675M525 0v675M630 0v675M735 0v675" stroke="#93c5fd"/>
+  </g>
+  <circle cx="708" cy="170" r="120" fill="#0d6efd" opacity=".24" filter="url(#glow)"/>
+  <g transform="translate(222 150)">
+    <rect x="94" y="0" width="270" height="138" rx="22" fill="#111827" stroke="#93c5fd" stroke-opacity=".36" stroke-width="3"/>
+    <rect x="132" y="34" width="194" height="58" rx="12" fill="#0d6efd" opacity=".52"/>
+    <rect x="36" y="142" width="384" height="230" rx="28" fill="url(#machine)" stroke="#dbeafe" stroke-opacity=".52" stroke-width="4"/>
+    <rect x="76" y="190" width="304" height="62" rx="14" fill="#0f172a" opacity=".82"/>
+    <rect x="120" y="290" width="216" height="26" rx="7" fill="#2563eb"/>
+    <rect x="120" y="332" width="170" height="20" rx="6" fill="#64748b"/>
+    <rect x="148" y="96" width="160" height="84" rx="10" fill="#f8fafc" opacity=".88"/>
+  </g>
+  <text x="450" y="592" text-anchor="middle" fill="#dbeafe" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="6">HERAJAYA</text>
+</svg>
