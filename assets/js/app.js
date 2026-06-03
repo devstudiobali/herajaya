@@ -24,7 +24,19 @@ function getProductMeta(product) {
   };
 }
 
+function getProductImages(product) {
+  if (Array.isArray(product.images) && product.images.length > 0) {
+    return product.images;
+  }
+
+  return [product.image];
+}
+
 function getProductDetailItems(product) {
+  if (Array.isArray(product.detailSpecs) && product.detailSpecs.length > 0) {
+    return product.detailSpecs;
+  }
+
   const categoryDetails = {
     "Mesin Baru": [
       "Unit baru bergaransi dan siap digunakan untuk operasional kantor.",
@@ -92,7 +104,7 @@ function createProductCard(product) {
         <img
           src="${product.image}"
           alt="${product.name}"
-          class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+          class="h-full w-full object-contain p-4 transition duration-500 group-hover:scale-105"
           loading="lazy"
           onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22800%22 height=%22600%22 fill=%22%23e2e8f0%22/%3E%3Crect x=%22230%22 y=%22150%22 width=%22340%22 height=%22260%22 rx=%2224%22 fill=%22%230f172a%22/%3E%3Crect x=%22272%22 y=%22195%22 width=%22256%22 height=%2280%22 rx=%2212%22 fill=%22%23f8fafc%22/%3E%3Crect x=%22272%22 y=%22310%22 width=%22180%22 height=%2224%22 fill=%22%232563eb%22/%3E%3Crect x=%22272%22 y=%22352%22 width=%22230%22 height=%2224%22 fill=%22%2394a3b8%22/%3E%3C/svg%3E';"
         />
@@ -156,10 +168,115 @@ function ensureProductModal() {
   });
 
   document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && document.querySelector("#productImageLightbox")) {
+      return;
+    }
+
     if (event.key === "Escape" && !modal.classList.contains("hidden")) {
       closeProductModal();
     }
   });
+}
+
+function openProductImageLightbox(images, initialIndex, altText) {
+  const existingLightbox = document.querySelector("#productImageLightbox");
+
+  if (existingLightbox) {
+    existingLightbox.remove();
+  }
+
+  let activeImageIndex = initialIndex;
+  const hasImageSlider = images.length > 1;
+  const lightbox = document.createElement("div");
+  lightbox.id = "productImageLightbox";
+  lightbox.className = "product-image-lightbox";
+  lightbox.innerHTML = `
+    <div class="product-image-lightbox-backdrop" data-image-lightbox-close></div>
+    <article class="product-image-lightbox-panel" role="dialog" aria-modal="true" aria-label="Foto produk diperbesar">
+      <button type="button" class="product-image-lightbox-close" data-image-lightbox-close aria-label="Tutup foto produk">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+      <img
+        src="${images[activeImageIndex]}"
+        alt="${altText}"
+        class="product-image-lightbox-photo"
+        data-image-lightbox-photo
+        onerror="this.src='assets/images/products/placeholder-copier.svg';"
+      />
+      ${hasImageSlider ? `
+        <button
+          type="button"
+          class="product-image-lightbox-nav product-image-lightbox-prev"
+          data-image-lightbox-nav="previous"
+          aria-label="Foto produk sebelumnya"
+        >
+          <i data-lucide="chevron-left" class="h-6 w-6" aria-hidden="true"></i>
+        </button>
+        <button
+          type="button"
+          class="product-image-lightbox-nav product-image-lightbox-next"
+          data-image-lightbox-nav="next"
+          aria-label="Foto produk berikutnya"
+        >
+          <i data-lucide="chevron-right" class="h-6 w-6" aria-hidden="true"></i>
+        </button>
+        <div class="product-image-lightbox-counter" data-image-lightbox-counter>
+          ${activeImageIndex + 1} / ${images.length}
+        </div>
+      ` : ""}
+    </article>
+  `;
+
+  document.body.appendChild(lightbox);
+  initIcons();
+
+  const photo = lightbox.querySelector("[data-image-lightbox-photo]");
+  const counter = lightbox.querySelector("[data-image-lightbox-counter]");
+
+  function setActiveImage(nextIndex) {
+    activeImageIndex = (nextIndex + images.length) % images.length;
+    photo.src = images[activeImageIndex];
+
+    if (counter) {
+      counter.textContent = `${activeImageIndex + 1} / ${images.length}`;
+    }
+  }
+
+  function closeLightbox() {
+    lightbox.remove();
+    document.removeEventListener("keydown", handleLightboxKeydown);
+  }
+
+  function handleLightboxKeydown(event) {
+    if (event.key === "Escape") {
+      event.stopPropagation();
+      closeLightbox();
+    }
+
+    if (event.key === "ArrowLeft" && hasImageSlider) {
+      setActiveImage(activeImageIndex - 1);
+    }
+
+    if (event.key === "ArrowRight" && hasImageSlider) {
+      setActiveImage(activeImageIndex + 1);
+    }
+  }
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target.closest("[data-image-lightbox-close]")) {
+      closeLightbox();
+      return;
+    }
+
+    const navButton = event.target.closest("[data-image-lightbox-nav]");
+
+    if (navButton) {
+      const direction = navButton.dataset.imageLightboxNav === "next" ? 1 : -1;
+      setActiveImage(activeImageIndex + direction);
+    }
+  });
+
+  document.addEventListener("keydown", handleLightboxKeydown);
 }
 
 function openProductModal(product) {
@@ -169,18 +286,44 @@ function openProductModal(product) {
   const content = document.querySelector("#productModalContent");
   const meta = getProductMeta(product);
   const detailItems = getProductDetailItems(product);
+  const productImages = getProductImages(product);
+  const hasImageSlider = productImages.length > 1;
+  let activeImageIndex = 0;
   const whatsappText = `Halo Herajaya, saya ingin konsultasi/order ${product.name} (${product.category}). Mohon info detail dan rekomendasinya.`;
 
   content.innerHTML = `
     <div class="grid gap-6 lg:min-h-[32rem] lg:grid-cols-[0.95fr_1.05fr]">
       <div class="min-h-full">
-        <div class="relative h-full min-h-[18rem] overflow-hidden border border-blue-200/20 bg-slate-900">
+        <div class="product-modal-photo-frame relative h-full min-h-[18rem] overflow-hidden border border-blue-200/20 bg-slate-900" data-product-zoom>
           <img
-            src="${product.image}"
+            src="${productImages[0]}"
             alt="${product.name}"
-            class="h-full min-h-[18rem] w-full object-cover"
+            class="h-full min-h-[18rem] w-full object-contain p-4"
+            data-product-carousel-image
             onerror="this.src='assets/images/products/placeholder-copier.svg';"
           />
+          <div class="product-modal-photo-hint">Klik untuk memperbesar</div>
+          ${hasImageSlider ? `
+            <button
+              type="button"
+              class="absolute left-4 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/20 bg-slate-950/70 text-white shadow-lg backdrop-blur transition hover:border-blue-300 hover:bg-blue-600/80"
+              data-product-carousel="previous"
+              aria-label="Foto produk sebelumnya"
+            >
+              <i data-lucide="chevron-left" class="h-5 w-5" aria-hidden="true"></i>
+            </button>
+            <button
+              type="button"
+              class="absolute right-4 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/20 bg-slate-950/70 text-white shadow-lg backdrop-blur transition hover:border-blue-300 hover:bg-blue-600/80"
+              data-product-carousel="next"
+              aria-label="Foto produk berikutnya"
+            >
+              <i data-lucide="chevron-right" class="h-5 w-5" aria-hidden="true"></i>
+            </button>
+            <div class="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2" aria-hidden="true">
+              ${productImages.map((_, index) => `<span class="h-2 w-2 rounded-full ${index === 0 ? "bg-blue-300" : "bg-white/35"}" data-product-carousel-dot="${index}"></span>`).join("")}
+            </div>
+          ` : ""}
           <span class="absolute left-4 top-4 border px-3 py-1.5 text-xs font-bold shadow-lg backdrop-blur ${getCategoryBadgeClass(product.category)}">
             ${product.category}
           </span>
@@ -223,13 +366,49 @@ function openProductModal(product) {
   modal.classList.remove("hidden");
   document.body.classList.add("modal-open");
   initIcons();
+
+  const carouselImage = content.querySelector("[data-product-carousel-image]");
+  const carouselButtons = content.querySelectorAll("[data-product-carousel]");
+  const carouselDots = content.querySelectorAll("[data-product-carousel-dot]");
+  const zoomTarget = content.querySelector("[data-product-zoom]");
+
+  function setActiveImage(nextIndex) {
+    activeImageIndex = (nextIndex + productImages.length) % productImages.length;
+    carouselImage.src = productImages[activeImageIndex];
+    carouselDots.forEach((dot, index) => {
+      dot.classList.toggle("bg-blue-300", index === activeImageIndex);
+      dot.classList.toggle("bg-white/35", index !== activeImageIndex);
+    });
+  }
+
+  if (hasImageSlider) {
+    carouselButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const direction = button.dataset.productCarousel === "next" ? 1 : -1;
+        setActiveImage(activeImageIndex + direction);
+      });
+    });
+  }
+
+  zoomTarget.addEventListener("click", (event) => {
+    if (event.target.closest("[data-product-carousel]")) {
+      return;
+    }
+
+    openProductImageLightbox(productImages, activeImageIndex, product.name);
+  });
 }
 
 function closeProductModal() {
   const modal = document.querySelector("#productModal");
+  const lightbox = document.querySelector("#productImageLightbox");
 
   if (!modal) {
     return;
+  }
+
+  if (lightbox) {
+    lightbox.remove();
   }
 
   modal.classList.add("hidden");

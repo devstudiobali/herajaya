@@ -1,24 +1,60 @@
 [
   {
-    "id": "canon-ir-adv-dx-c3720i",
-    "name": "Canon imageRUNNER ADVANCE DX C3720i",
-    "category": "Mesin Baru",
-    "image": "assets/images/products/placeholder-copier.svg",
-    "specs": "A3 Color Multifunction, print scan copy, duplex, network ready, cocok untuk kantor modern."
-  },
-  {
-    "id": "canon-ir-adv-4525i",
-    "name": "Canon imageRUNNER ADVANCE 4525i",
-    "category": "Mesin Baru",
-    "image": "assets/images/products/placeholder-copier.svg",
-    "specs": "A3 Monochrome, kecepatan 25 ppm, duplex, DADF, hemat energi untuk operasional harian."
-  },
-  {
-    "id": "ricoh-mp-3055",
-    "name": "Ricoh MP 3055",
+    "id": "canon-ir-adv-6575",
+    "name": "Canon imageRUNNER ADVANCE (iR-ADV) 6575",
     "category": "Mesin Rekondisi",
-    "image": "assets/images/products/placeholder-copier.svg",
-    "specs": "A3 Monochrome, 30 ppm, scan warna, copy volume menengah, unit rekondisi siap pakai."
+    "image": "assets/images/products/canon-ir-adv-6575.jpg",
+    "images": [
+      "assets/images/products/canon-ir-adv-6575.jpg",
+      "assets/images/products/canon-ir-adv-6575-detail.jpeg"
+    ],
+    "specs": "Printer multifungsi laser monokrom (hitam putih) berkecepatan tinggi yang dirancang untuk lingkungan kantor bervolume tinggi.",
+    "detailSpecs": [
+      "Fungsi: Cetak Standar, Salin, Pindai, Kirim, dan Simpan; Opsional Faks.",
+      "Kecepatan Cetak: Hingga 75 ppm (Letter) atau 37 ppm (A3/Ledger).",
+      "Resolusi: Output berkualitas tinggi pada 1200 x 1200 dpi.",
+      "Memori & Penyimpanan: Dilengkapi dengan RAM 3,0 GB dan HDD standar 250 GB (dapat diperluas hingga 1 TB).",
+      "Tampilan: Menampilkan layar sentuh berwarna besar 10,1 inci untuk navigasi intuitif seperti ponsel cerdas.",
+      "Kertas Kapasitas: Standar 4.200 lembar, dapat diperluas hingga 7.700 lembar untuk jangka waktu lama dan tanpa gangguan."
+    ]
+  },
+  {
+    "id": "canon-ir-adv-4225",
+    "name": "Canon imageRUNNER ADVANCE (iR-ADV) 4225",
+    "category": "Mesin Rekondisi",
+    "image": "assets/images/products/canon-ir-adv-4225.jpg",
+    "images": [
+      "assets/images/products/canon-ir-adv-4225.jpg",
+      "assets/images/products/canon-ir-adv-4225-detail.jpeg"
+    ],
+    "specs": "Printer multifungsi digital monokrom tangguh yang dibuat untuk kelompok kerja kecil hingga menengah.",
+    "detailSpecs": [
+      "Fungsi: Salin Standar, Cetak (UFR II), Pindai, Kirim, dan Simpan; Faks Opsional (hingga 4 baris).",
+      "Resolusi Cetak: Output monokrom berkualitas tinggi hingga 1200 x 1200 dpi.",
+      "Memori & Penyimpanan: RAM standar 1,25 GB (dapat diperluas hingga 1,75 GB) dan HDD 160 GB (dapat diperluas hingga 1 TB).",
+      "Layar: Menggunakan layar sentuh TFT penuh warna SVGA 8,4 inci untuk pengelolaan tugas yang mudah.",
+      "Kapasitas Kertas: Standar 1.180 lembar (kaset ganda 550 lembar + bypass 80 lembar), dapat diperluas hingga 4.980 lembar.",
+      "Pemindaian Serbaguna: Menampilkan pemindaian warna dengan kecepatan hingga 51 gambar per menit (ipm) dan mendukung distribusi ke format seperti PDF, XPS, dan PowerPoint yang dapat dicari."
+    ]
+  },
+  {
+    "id": "canon-ir-adv-4525",
+    "name": "Canon imageRUNNER ADVANCE (iR-ADV) 4525",
+    "category": "Mesin Rekondisi",
+    "image": "assets/images/products/canon-ir-adv-4525.jpg",
+    "images": [
+      "assets/images/products/canon-ir-adv-4525.jpg",
+      "assets/images/products/canon-ir-adv-4525-detail.jpeg"
+    ],
+    "specs": "Printer multifungsi A3 monokrom andal yang dirancang untuk menyederhanakan alur kerja di lingkungan kantor yang sibuk.",
+    "detailSpecs": [
+      "Fungsi: Cetak Standar, Salin, Pindai, Kirim, dan Simpan; Opsional Faks.",
+      "Kecepatan Cetak: Hingga 25 ppm (Letter) atau 15 ppm (A3).",
+      "Resolusi: Pencetakan tajam pada 1200 x 1200 dpi.",
+      "Memori & Penyimpanan: Dilengkapi dengan RAM 3,0 GB dan HDD standar 250 GB (dapat ditingkatkan hingga 1 TB).",
+      "Panel Kontrol: Layar sentuh berwarna TFT LCD 10,1 inci yang besar dengan navigasi seperti ponsel cerdas.",
+      "Kapasitas Kertas: Standar 1.185 lembar, yang dapat diperluas hingga maksimum 6.330 lembar untuk tugas bervolume tinggi."
+    ]
   },
   {
     "id": "xerox-apeosport-v-c3375",
